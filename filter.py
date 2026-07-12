@@ -84,7 +84,16 @@ def filter_sites(data,remove_list):
         "原始站点:",
         len(sites)
     )
+    print("======全部站点======")
 
+for s in sites:
+    print(
+        s.get("key"),
+        "|",
+        s.get("name")
+    )
+
+    print("===================")
 
 
     for site in sites:
