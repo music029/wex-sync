@@ -1,14 +1,6 @@
 import json
 import urllib.request
-import os
 
-
-# 原始配置地址
-SOURCE_URL = "https://9280.kstore.vip/wex.json"
-
-
-# 本地文件
-SOURCE_FILE = "fish.json"
 
 CONFIG_FILE = "config.json"
 
@@ -16,35 +8,10 @@ OUTPUT_FILE = "fish_clean.json"
 
 
 
-def download_source():
-
-    try:
-
-        print("正在下载最新配置...")
-
-        urllib.request.urlretrieve(
-            SOURCE_URL,
-            SOURCE_FILE
-        )
-
-        print("下载完成:", SOURCE_FILE)
-
-
-    except Exception as e:
-
-        print(
-            "下载失败:",
-            e
-        )
-
-        exit()
-
-
-
-def load_json(file):
+def load_json(path):
 
     with open(
-        file,
+        path,
         "r",
         encoding="utf-8"
     ) as f:
@@ -53,10 +20,10 @@ def load_json(file):
 
 
 
-def save_json(file,data):
+def save_json(path,data):
 
     with open(
-        file,
+        path,
         "w",
         encoding="utf-8"
     ) as f:
@@ -70,64 +37,101 @@ def save_json(file,data):
 
 
 
-def filter_sites(data,config):
+def download_json(url):
+
+    print("下载源配置:")
+    print(url)
 
 
-    remove_sites = set(
-        config.get(
-            "remove_sites",
-            []
-        )
+    request = urllib.request.Request(
+        url,
+        headers={
+            "User-Agent":
+            "Mozilla/5.0"
+        }
     )
 
 
-    rename_sites = config.get(
-        "rename_sites",
-        {}
+    with urllib.request.urlopen(
+        request,
+        timeout=30
+    ) as response:
+
+
+        text = response.read().decode(
+            "utf-8"
+        )
+
+
+    return json.loads(text)
+
+
+
+def filter_sites(data,remove_list):
+
+
+    sites = data.get(
+        "sites",
+        []
     )
 
 
     new_sites = []
 
 
-    for site in data.get(
-        "sites",
-        []
-    ):
+
+    print(
+        "原始站点:",
+        len(sites)
+    )
 
 
-        key = site.get(
-            "key",
-            ""
+
+    for site in sites:
+
+
+        key = str(
+            site.get(
+                "key",
+                ""
+            )
         )
 
 
-        name = site.get(
-            "name",
-            ""
+        name = str(
+            site.get(
+                "name",
+                ""
+            )
         )
 
 
-        # 删除站点
+        api = str(
+            site.get(
+                "api",
+                ""
+            )
+        )
+
+
+        # key/name/api 三项匹配
+
         if (
-            key in remove_sites
+            key in remove_list
             or
-            name in remove_sites
+            name in remove_list
+            or
+            api in remove_list
         ):
 
             print(
                 "删除:",
+                key,
                 name
             )
 
             continue
 
-
-
-        # 修改名称
-        if key in rename_sites:
-
-            site["name"] = rename_sites[key]
 
 
         new_sites.append(site)
@@ -137,6 +141,12 @@ def filter_sites(data,config):
     data["sites"] = new_sites
 
 
+    print(
+        "剩余站点:",
+        len(new_sites)
+    )
+
+
     return data
 
 
@@ -144,38 +154,39 @@ def filter_sites(data,config):
 def main():
 
 
-    # 1.下载最新配置
-
-    download_source()
-
-
-
-    # 2.读取规则
-
     config = load_json(
         CONFIG_FILE
     )
 
 
+    source_url = config[
+        "source_url"
+    ]
 
-    # 3.读取源配置
 
-    data = load_json(
-        SOURCE_FILE
+    remove_list = set(
+        config[
+            "remove_sites"
+        ]
     )
 
 
+    # 下载官方源
 
-    # 4.过滤
+    data = download_json(
+        source_url
+    )
+
+
+    # 过滤
 
     result = filter_sites(
         data,
-        config
+        remove_list
     )
 
 
-
-    # 5.输出
+    # 输出
 
     save_json(
         OUTPUT_FILE,
@@ -183,26 +194,14 @@ def main():
     )
 
 
-
-    print("===================")
-
     print(
-        "过滤完成"
+        "=================="
     )
 
     print(
-        "输出文件:",
+        "完成:"
+        ,
         OUTPUT_FILE
-    )
-
-    print(
-        "剩余站点:",
-        len(
-            result.get(
-                "sites",
-                []
-            )
-        )
     )
 
 
