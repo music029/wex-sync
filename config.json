@@ -1,151 +1,69 @@
 {
-  "keep_4k": [
-    "Wogg",
-    "FishMuou",
-    "FishErxiao",
-    "FishLabi",
-    "FishZhizhen",
-    "FishDuoduo",
-    "PanWebShare123",
-    "PanWebShareGuangYa"
+  "remove_sites": [
+    "Doubanaaa",
+    "WexhubanGuard",
+    "盘他",
+    "雷鲸",
+    "Wexpan123ziyuanGuard",
+    "新6V",
+    "Wexduanjuvop",
+    "Wexduanjusuipian",
+    "Wexduanjuvmp",
+    "Wexduanjuhema",
+    "Wexduanju001",
+    "Wexlaobaitingshu",
+    "Wex275tingshu",
+    "Wexliyuan",
+    "Wextangdou",
+    "WexLunhuiDJ",
+    "Wexbiliys",
+    "bili",
+    "biliych",
+    "少儿教育",
+    "小学课堂",
+    "初中课堂",
+    "高中教育",
+    "看球",
+    "瓜子看球",
+    "Wextyso",
+    "WexbaidusoGuard",
+    "WexHaiYinsoGuard",
+    "Wex97pansoGuard",
+    "WexNewHuYa",
+    "WexNewDouYu",
+    "WexNewBiLiLive",
+    "自定义",
+    "AList",
+    "115",
+    "tianyi",
+    "夸克",
+    "优熙",
+    "异动",
+    "WexWo123panGuard",
+    "xunlei",
+    "baidu"
   ],
 
-  "remove_keywords": [
-    "短剧",
-    "动漫",
-    "动画",
-    "磁力",
-    "音乐",
-    "MV",
-    "教育",
-    "少儿",
-    "小学",
-    "初中",
-    "高中",
-    "课堂",
-    "课程",
-    "体育",
-    "足球",
-    "篮球",
-    "有声",
-    "听书",
-    "搜索",
-    "搜",
-    "盘",
-    "盘搜",
-    "共影",
-    "琉璃"
-  ],
-
-
-  "rename_by_key": {
-
-    "Douban": "✧片单┃精选✧",
-    "YGP": "✧新片┃预告✧",
-    "FishConfig": "✧设置┃中心✧",
-    "Local": "✧文件┃浏览✧",
-
-
-    "Wogg": "✧玩偶┃4K✧",
-    "FishMuou": "✧木偶┃4K✧",
-    "FishErxiao": "✧二小┃4K✧",
-    "FishLabi": "✧蜡笔┃4K✧",
-    "FishZhizhen": "✧至臻┃4K✧",
-    "FishDuoduo": "✧多多┃4K✧",
-    "PanWebShare123": "✧123┃4K✧",
-    "PanWebShareGuangYa": "✧光鸭┃4K✧",
-
-
-    "Rebo": "✧热播┃APP✧",
-    "三秋影视": "✧三秋┃APP✧",
-
-
-    "zhiqiu": "✧听风┃知秋✧",
-    "fishhxq": "✧韩圈┃影视✧",
-    "Kan360": "✧三六┃影视✧",
-
-    "Wwys": "✧糯米┃影视✧",
-    "CZ": "✧厂长┃影视✧",
-    "wencai": "✧文才┃影视✧",
-    "Guazi": "✧瓜子┃影视✧",
-    "TvDy": "✧天堂┃影视✧",
-    "MqTv": "✧麻雀┃影视✧",
-    "SaoHuo": "✧骚火┃影视✧",
-    "Duboku": "✧独播┃影视✧",
-    "Ikanbot": "✧爱看┃影视✧",
-
-
-    "push_agent": "✧推送┃接收✧",
-    "Fishdrive": "✧摸鱼┃媒体库✧"
-  },
-
-
-  "rename_map": {
-    "片单": "✧片单┃精选✧",
-    "新片": "✧新片┃预告✧",
-    "设置": "✧设置┃中心✧",
-    "文件": "✧文件┃浏览✧",
-
-    "热播": "✧热播┃APP✧",
-    "三秋": "✧三秋┃APP✧",
-
-    "听风": "✧听风┃知秋✧",
-    "韩圈": "✧韩圈┃影视✧",
-    "三六": "✧三六┃影视✧",
-
-    "推送": "✧推送┃接收✧",
-    "媒体库": "✧摸鱼┃媒体库✧",
-    "壁纸库": "✧摸鱼┃壁纸库✧"
-  },
-
-
-  "function_order": [
+  "keep_sites": [
     "Douban",
-    "YGP",
-    "FishConfig",
-    "Local"
-  ],
-
-
-  "fourk_order": [
-    "Wogg",
-    "FishMuou",
-    "FishErxiao",
-    "FishLabi",
-    "FishZhizhen",
-    "FishDuoduo",
-    "PanWebShare123",
-    "PanWebShareGuangYa"
-  ],
-
-
-  "app_order": [
-    "Rebo",
-    "三秋影视"
-  ],
-
-
-  "movie_order": [
-    "zhiqiu",
-    "fishhxq",
-    "Kan360",
-    "Wwys",
-    "CZ",
-    "wencai",
-    "Guazi",
-    "TvDy",
-    "MqTv",
-    "SaoHuo",
-    "Duboku",
-    "Ikanbot"
-  ],
-
-
-  "footer_order": [
-    "push_agent",
-    "Fishdrive"
-  ],
-
-
-  "min_sites": 10
+    "Doubana",
+    "Wexconfig",
+    "Wexokconfig",
+    "WexerxiaoziyuanGuard",
+    "玩偶",
+    "Wexzhizhen",
+    "Wexnullname",
+    "WexduoduoziyuanGuard",
+    "Wexmuougg",
+    "WexshuangzixingGuard",
+    "WexleijingGuard",
+    "Wexhanxiaoquan",
+    "賤賤",
+    "WexkuihuatvGuard",
+    "Wexwencai",
+    "csp_Nmys",
+    "WexbttwoGuard",
+    "WexikanbotGuard",
+    "Wexemby"
+  ]
 }
