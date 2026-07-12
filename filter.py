@@ -4,7 +4,7 @@ import urllib.request
 
 CONFIG_FILE = "config.json"
 
-OUTPUT_FILE = "fish_clean.json"
+OUTPUT_FILE = "fish.json"
 
 
 
