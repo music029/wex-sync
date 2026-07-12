@@ -8,6 +8,7 @@
       "name": "✧豆瓣┃导航✧",
       "type": 3,
       "api": "csp_NewDouBanGuard",
+      "indexs": 1,
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
@@ -15,9 +16,10 @@
     },
     {
       "key": "Doubana",
-      "name": "✧【更新日期:20260712】✧",
+      "name": "✧【更新:20260712】✧",
       "type": 3,
       "api": "csp_NewDouBanGuard",
+      "indexs": 1,
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
@@ -25,7 +27,7 @@
     },
     {
       "key": "Doubana",
-      "name": "✧【更新日期:20260712】✧",
+      "name": "✧【更新:20260712】✧",
       "type": 3,
       "api": "csp_NewDouBanGuard",
       "searchable": 0,
