@@ -6,16 +6,27 @@ CONFIG_FILE = "config.json"
 OUTPUT_FILE = "fish.json"
 
 
+
 def load_json(path):
 
-    with open(path, "r", encoding="utf-8") as f:
+    with open(
+        path,
+        "r",
+        encoding="utf-8"
+    ) as f:
+
         return json.load(f)
 
 
 
 def save_json(path, data):
 
-    with open(path, "w", encoding="utf-8") as f:
+    with open(
+        path,
+        "w",
+        encoding="utf-8"
+    ) as f:
+
         json.dump(
             data,
             f,
@@ -27,102 +38,146 @@ def save_json(path, data):
 
 def download_json(url):
 
+    print("=================")
     print("下载配置:")
     print(url)
 
-    req = urllib.request.Request(
+
+    request = urllib.request.Request(
         url,
         headers={
             "User-Agent": "Mozilla/5.0"
         }
     )
 
+
     with urllib.request.urlopen(
-        req,
+        request,
         timeout=30
     ) as response:
 
-        text = response.read().decode("utf-8")
+        content = response.read().decode(
+            "utf-8"
+        )
 
-    return json.loads(text)
+
+    return json.loads(content)
 
 
 
 def main():
 
-    config = load_json(CONFIG_FILE)
+
+    # 读取过滤配置
+
+    config = load_json(
+        CONFIG_FILE
+    )
 
 
-    source_url = config["source_url"]
+    source_url = config.get(
+        "source_url"
+    )
 
 
-    data = download_json(source_url)
+    # 下载作者配置
+
+    data = download_json(
+        source_url
+    )
 
 
-    sites = data.get("sites", [])
+    sites = data.get(
+        "sites",
+        []
+    )
 
 
     print("=================")
-    print("原始站点:", len(sites))
+    print(
+        "原始站点:",
+        len(sites)
+    )
 
 
-    print("======全部站点======")
+    # 白名单
 
-    for s in sites:
-
-        print(
-            s.get("key"),
-            "|",
-            s.get("name")
+    keep_sites = set(
+        config.get(
+            "keep_sites",
+            []
         )
-
-    print("=================")
-
-
-
-    remove_sites = set(
-        config.get("remove_sites", [])
     )
 
 
     new_sites = []
 
 
+
+    print("=================")
+    print("开始过滤")
+    print("=================")
+
+
+
     for site in sites:
 
 
-        key = site.get("key", "")
-        name = site.get("name", "")
-        api = site.get("api", "")
+        key = site.get(
+            "key",
+            ""
+        )
 
 
-        if (
-            key in remove_sites
-            or name in remove_sites
-            or api in remove_sites
-        ):
+        name = site.get(
+            "name",
+            ""
+        )
+
+
+        if key in keep_sites:
+
 
             print(
-                "删除:",
+                "保留:",
                 key,
+                "|",
                 name
             )
 
-            continue
+
+            new_sites.append(
+                site
+            )
 
 
-        new_sites.append(site)
+        else:
 
 
+            print(
+                "屏蔽:",
+                key,
+                "|",
+                name
+            )
+
+
+
+    # 替换站点列表
 
     data["sites"] = new_sites
 
 
+
+    print("=================")
     print(
-        "剩余站点:",
+        "最终站点:",
         len(new_sites)
     )
 
+
+
+    # 输出 fish.json
 
     save_json(
         OUTPUT_FILE,
@@ -131,9 +186,13 @@ def main():
 
 
     print("=================")
-    print("完成: fish.json")
+    print(
+        "完成:",
+        OUTPUT_FILE
+    )
 
 
 
 if __name__ == "__main__":
+
     main()
