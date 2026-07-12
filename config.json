@@ -1,15 +1,17 @@
 {
   "source_url": "https://9280.kstore.vip/newwex.json",
 
-  "remove_sites": [
-
+  "keep_sites": [
+    "NewDouBan",
     "Doubana",
+    "Wexconfig",
 
-    "NewJuTou",
-
-    "NewHuBan",
-
-    "原盘",
+    "二小",
+    "玩偶",
+    "NewZhiZhen",
+    "NewMuOu",
+    "NewDuoDuo",
+    "NewPanMe123",
 
     "WexHanXiaoQuan",
     "WexGuaZi",
@@ -19,78 +21,17 @@
     "WexYueYue",
     "WexV6DaShiXiong",
     "WexV6TeGou",
-
-    "WexBoBo",
-
-    "新6V",
-
-    "LiveHuYa",
-    "LiveDouYu",
-    "LiveBiLi",
-
-    "ManJuHongGuo",
-    "ManJuHuoLong",
-    "ManJuQiMao",
-    "ManJuXiFan",
-
-    "DuanJuHaoKan",
-    "DuanJuQiMiao",
-    "DuanJuHeMa",
-    "DuanJuXingYa",
-    "DuanJuWeiGuan",
-
-    "AnimeFanShu",
-    "AnimeMiaoWuGuard",
-    "AnimeMoDu",
-
-    "BookShiJie",
-    "BookYueTing",
-    "Book23TingShu",
+    "WexYiYs",
+    "WexReBo",
 
     "ChildrenDuoDuo",
     "ChildrenBaoBao",
     "ChildrenBeiWa",
-    "ChildrenTuTu",
 
-    "WexTangDou",
-
-    "MusicLiYuan",
-    "MusicQingTing",
     "MusicIKtv",
     "Music163",
     "MusicKuWo",
-    "MusicLunHui",
 
-    "bilibiliys",
-    "bilibili",
-    "bilixiqu",
-    "biliych",
-
-    "少儿教育",
-    "小学课堂",
-    "初中课堂",
-    "高中教育",
-
-    "SportFeiQiu",
-    "SportGuaZi",
-    "SportKanQiuTong",
-    "SportKanqiu",
-    "SportKaFei",
-    "SportWwe",
-
-    "MyQuark",
-    "MyBaiDu",
-    "MyUcPan",
-    "MyGuangYa",
-    "MyPan189",
-    "MyPan115",
-    "Fake115Share",
-    "MyPan123",
-
-    "SoTySo",
-    "SoBaiDuSo",
-    "SoHaiYin",
-    "So97So"
-
+    "push_agent"
   ]
 }
