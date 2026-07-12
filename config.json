@@ -1,5 +1,8 @@
 {
+  "source_url": "https://9280.kstore.vip/wex.json",
+
   "remove_sites": [
+
     "Doubanaaa",
 
     "WexshuangzixingGuard",
@@ -57,35 +60,5 @@
     "WexWo123panGuard",
     "xunlei",
     "baidu"
-  ],
-
-
-  "rename_sites": {
-
-  },
-
-
-  "keep_sites": [
-    "Douban",
-    "Doubana",
-    "Wexconfig",
-    "Wexokconfig",
-
-    "WexerxiaoziyuanGuard",
-    "玩偶",
-    "Wexzhizhen",
-    "Wexnullname",
-    "WexduoduoziyuanGuard",
-    "Wexmuougg",
-
-    "Wexhanxiaoquan",
-    "賤賤",
-    "WexkuihuatvGuard",
-    "Wexwencai",
-    "csp_Nmys",
-    "WexbttwoGuard",
-    "WexikanbotGuard",
-
-    "Wexemby"
   ]
 }
