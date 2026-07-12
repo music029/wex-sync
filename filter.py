@@ -3,7 +3,7 @@ import urllib.request
 from datetime import datetime
 
 
-SOURCE = "https://6800.kstore.vip/fish.json"
+SOURCE = "https://9280.kstore.vip/wex.json"
 
 
 # =====================
