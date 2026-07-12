@@ -1,14 +1,15 @@
-name: fish自动同步
+name: Wex TVBox 自动同步过滤
 
 
 on:
 
-  workflow_dispatch:
-
-
+  # 每天北京时间 04:00 自动运行
   schedule:
+    - cron: "0 20 * * *"
 
-    - cron: "0 */6 * * *"
+
+  # 支持手动运行
+  workflow_dispatch:
 
 
 
@@ -20,6 +21,7 @@ permissions:
 
 jobs:
 
+
   sync:
 
 
@@ -30,41 +32,71 @@ jobs:
     steps:
 
 
-    - name: 拉取仓库
+      # 拉取仓库
 
-      uses: actions/checkout@v4
+      - name: Checkout
 
-      with:
-
-        token: ${{ secrets.GITHUB_TOKEN }}
+        uses: actions/checkout@v4
 
 
 
-    - name: 执行过滤
+      # 安装 Python
 
-      run: |
+      - name: Setup Python
 
-        python filter.py
+        uses: actions/setup-python@v5
 
+        with:
 
-
-    - name: 保存更新
-
-      run: |
+          python-version: "3.x"
 
 
-        git config --global user.name "github-actions"
 
-        git config --global user.email "actions@github.com"
+      # 运行过滤程序
 
+      - name: Run filter
 
-        git add fish.json
+        run: |
 
-
-        git diff --cached --quiet && exit 0
-
-
-        git commit -m "自动同步 fish 接口"
+          python filter.py
 
 
-        git push
+
+      # 检查生成结果
+
+      - name: Check files
+
+        run: |
+
+          ls -lh
+
+          echo "fish.json 检查"
+
+          head -c 200 fish.json
+
+
+
+      # 自动提交 fish.json
+
+      - name: Commit and Push
+
+
+        run: |
+
+
+          git config user.name "github-actions"
+
+
+          git config user.email "github-actions@github.com"
+
+
+
+          git add fish.json
+
+
+
+          git commit -m "自动更新TVBox配置" || echo "没有变化"
+
+
+
+          git push
