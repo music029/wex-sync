@@ -15,7 +15,7 @@ name_replace = {
 
     "NewDouBan": "✧豆瓣┃导航✧",
 
-    "Doubana": "✧【更新日期:20260712】✧",
+    "Doubana": "✧【更新:20260712】✧",
 
     "Wexconfig": "✧配置┃中心✧",
 
