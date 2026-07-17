@@ -76,27 +76,21 @@ jobs:
 
 
 
-      # 自动提交 fish.json
+      # 自动提交
 
       - name: Commit and Push
 
-
         run: |
 
-
           git config user.name "github-actions"
-
 
           git config user.email "github-actions@github.com"
 
 
-
-          git add fish.json
-
+          git add .
 
 
-          git commit -m "自动更新TVBox配置" || echo "没有变化"
-
+          git commit -m "自动更新Wex TVBox配置" || echo "没有变化"
 
 
           git push
