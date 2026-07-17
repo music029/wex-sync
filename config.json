@@ -1,9 +1,6 @@
 {
-  "source_url": "https://9280.kstore.vip/newwex.json",
-
   "keep_sites": [
     "NewDouBan",
-    "Doubana",
     "Wexconfig",
 
     "二小",
@@ -16,21 +13,65 @@
     "WexHanXiaoQuan",
     "WexGuaZi",
     "賤賤",
-    "WexWenCai",
     "WexDuBoKu",
-    "WexV6DaShiXiong",
-    "WexV6TeGou",
-    "WexYiYs",
     "WexReBo",
 
-    "ChildrenDuoDuo",
-    "ChildrenBaoBao",
-    "ChildrenBeiWa",
-
-    "MusicIKtv",
-    "Music163",
-    "MusicKuWo",
-
     "push_agent"
-  ]
+  ],
+
+
+  "rename_by_key": {
+
+    "NewDouBan": "✧片单┃精选✧",
+    "Wexconfig": "✧设置┃中心✧",
+
+    "二小": "✧二小┃4K✧",
+    "玩偶": "✧玩偶┃4K✧",
+    "NewZhiZhen": "✧至臻┃4K✧",
+    "NewMuOu": "✧木偶┃4K✧",
+    "NewDuoDuo": "✧多多┃4K✧",
+    "NewPanMe123": "✧123┃4K✧",
+
+    "WexHanXiaoQuan": "✧韩剧┃影视✧",
+    "WexGuaZi": "✧瓜子┃影视✧",
+    "賤賤": "✧贱片┃影视✧",
+    "WexDuBoKu": "✧独播┃影视✧",
+    "WexReBo": "✧热播┃影视✧",
+
+    "push_agent": "✧推送┃接收✧"
+
+  },
+
+
+  "function_order": [
+    "NewDouBan",
+    "Wexconfig"
+  ],
+
+
+  "fourk_order": [
+    "二小",
+    "玩偶",
+    "NewZhiZhen",
+    "NewMuOu",
+    "NewDuoDuo",
+    "NewPanMe123"
+  ],
+
+
+  "movie_order": [
+    "WexHanXiaoQuan",
+    "WexGuaZi",
+    "賤賤",
+    "WexDuBoKu",
+    "WexReBo"
+  ],
+
+
+  "other_order": [
+    "push_agent"
+  ],
+
+
+  "min_sites": 14
 }
