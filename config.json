@@ -2,6 +2,9 @@
   "source": "https://9280.kstore.vip/aiwex.json",
 
   "keep_keys": [
+
+    "Douban",
+
     "Wexconfig",
 
     "玩偶",
@@ -17,10 +20,12 @@
     "WexAiGuaZi",
     "WexAiDuBoKu",
     "WexAiWenCai"
+
   ],
 
 
   "remove_keywords": [
+
     "直播",
     "短剧",
     "动漫",
@@ -39,12 +44,17 @@
     "采集",
     "推送",
     "DIY"
+
   ],
 
 
   "rename": {
 
+
+    "Douban": "✧豆瓣┃导航✧",
+
     "Wexconfig": "✧设置┃中心✧",
+
 
     "玩偶": "✧玩偶┃4K✧",
     "AiNewMuOu": "✧木偶┃4K✧",
@@ -66,7 +76,10 @@
 
   "order": [
 
+    "Douban",
+
     "Wexconfig",
+
 
     "玩偶",
     "AiNewMuOu",
@@ -76,6 +89,7 @@
     "AiGuangYaZhenYing",
     "AiNewGuanYing",
     "AiQwMkv",
+
 
     "WexAiReBo",
     "WexAiGuaZi",
