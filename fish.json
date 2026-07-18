@@ -16,19 +16,28 @@
       }
     },
     {
-      "key": "二小",
-      "name": "✧二小┃4K✧",
+      "key": "玩偶",
+      "name": "✧玩偶┃4K✧",
       "type": 3,
-      "api": "csp_AiNewXiaoPanGuard",
+      "api": "csp_AiNewWoggGuard",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0
     },
     {
-      "key": "玩偶",
-      "name": "✧玩偶┃4K✧",
+      "key": "AiNewMuOu",
+      "name": "✧木偶┃4K✧",
       "type": 3,
-      "api": "csp_AiNewWoggGuard",
+      "api": "csp_AiNewMuOuGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0
+    },
+    {
+      "key": "二小",
+      "name": "✧二小┃4K✧",
+      "type": 3,
+      "api": "csp_AiNewXiaoPanGuard",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0
@@ -43,29 +52,75 @@
       "changeable": 0
     },
     {
-      "key": "WexHanXiaoQuan",
-      "name": "✧韩剧┃影视✧",
+      "key": "AiNewDuoDuo",
+      "name": "✧多多┃4K✧",
       "type": 3,
-      "api": "csp_WexAiHanXiaoQuanGuard",
+      "api": "csp_AiNewDuoDuoGuard",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0
     },
     {
-      "key": "賤賤",
-      "name": "✧贱片┃影视✧",
+      "key": "AiGuangYaZhenYing",
+      "name": "✧光鸭┃4K✧",
       "type": 3,
-      "api": "csp_WexAiJianPianGuard",
+      "api": "csp_AiGuangYaZhenYingGuard",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0
     },
     {
-      "key": "push_agent",
-      "name": "✧推送┃接收✧",
+      "key": "AiNewGuanYing",
+      "name": "✧观影┃4K✧",
       "type": 3,
-      "api": "csp_PushGuard",
+      "api": "csp_AiNewGuanYingGuard",
       "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0
+    },
+    {
+      "key": "AiQwMkv",
+      "name": "✧七味┃4K✧",
+      "type": 3,
+      "api": "csp_AiQwMkvGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0
+    },
+    {
+      "key": "WexAiReBo",
+      "name": "✧热播┃影视✧",
+      "type": 3,
+      "api": "csp_WexAiReBoGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0
+    },
+    {
+      "key": "WexAiGuaZi",
+      "name": "✧瓜子┃影视✧",
+      "type": 3,
+      "api": "csp_WexAiGuaZiGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0
+    },
+    {
+      "key": "WexAiDuBoKu",
+      "name": "✧独播┃影视✧",
+      "type": 3,
+      "api": "csp_WexAiDuBoKuGuard",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0
+    },
+    {
+      "key": "WexAiWenCai",
+      "name": "✧文才┃影视✧",
+      "type": 3,
+      "api": "csp_WexAiWenCaiGuard",
+      "searchable": 1,
+      "quickSearch": 1,
       "changeable": 0
     }
   ],
