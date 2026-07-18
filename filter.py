@@ -60,7 +60,17 @@ def download_json(url):
         )
 
 
-    return json.loads(text)
+    data = json.loads(text)
+
+
+    if "sites" not in data:
+
+        raise Exception(
+            "接口异常，没有sites字段"
+        )
+
+
+    return data
 
 
 
@@ -84,8 +94,6 @@ def sort_site(site, config):
     )
 
 
-    # 功能
-
     index = get_order(
         key,
         config.get(
@@ -102,8 +110,6 @@ def sort_site(site, config):
         )
 
 
-
-    # 4K
 
     index = get_order(
         key,
@@ -122,8 +128,6 @@ def sort_site(site, config):
 
 
 
-    # 影视
-
     index = get_order(
         key,
         config.get(
@@ -140,8 +144,6 @@ def sort_site(site, config):
         )
 
 
-
-    # 其它
 
     index = get_order(
         key,
@@ -190,6 +192,14 @@ def main():
     )
 
 
+    if len(old_sites) == 0:
+
+        raise Exception(
+            "接口站点为空"
+        )
+
+
+
     keep = set(
         config.get(
             "keep_sites",
@@ -224,6 +234,7 @@ def main():
             continue
 
 
+
         if key in seen:
 
             continue
@@ -233,11 +244,15 @@ def main():
 
 
 
+        # 只保留指定站点
+
         if key not in keep:
 
             continue
 
 
+
+        # 修改名称
 
         if key in rename:
 
@@ -249,6 +264,8 @@ def main():
 
 
 
+    # 排序
+
     new_sites.sort(
         key=lambda x:
         sort_site(
@@ -259,14 +276,35 @@ def main():
 
 
 
-    if len(new_sites) < config.get(
-        "min_sites",
-        0
-    ):
+    # ==========================
+    # 安全保护
+    # ==========================
+
+    if len(new_sites) == 0:
 
         raise Exception(
-            f"站点数量异常: {len(new_sites)}"
+            "过滤后没有站点，请检查keep_sites配置"
         )
+
+
+    print("================")
+
+    print(
+        "过滤后站点:",
+        len(new_sites)
+    )
+
+
+    for s in new_sites:
+
+        print(
+            s.get("key"),
+            "|",
+            s.get("name")
+        )
+
+
+    print("================")
 
 
 
@@ -280,24 +318,10 @@ def main():
     )
 
 
-
-    print("================")
-
     print(
-        "最终保留:",
-        len(new_sites)
+        "生成完成:",
+        OUTPUT_FILE
     )
-
-
-    for s in new_sites:
-
-        print(
-            s["key"],
-            s["name"]
-        )
-
-
-    print("================")
 
 
 
