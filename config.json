@@ -1,78 +1,86 @@
 {
-  "source_url": "https://9280.kstore.vip/aiwex.json ",
+  "source": "https://9280.kstore.vip/aiwex.json",
 
-  "keep_sites": [
-    "NewDouBan",
+  "keep_keys": [
     "Wexconfig",
 
-    "二小",
     "玩偶",
+    "AiNewMuOu",
+    "二小",
     "NewZhiZhen",
-    "NewMuOu",
-    "NewDuoDuo",
-    "NewPanMe123",
+    "AiNewDuoDuo",
+    "AiGuangYaZhenYing",
+    "AiNewGuanYing",
+    "AiQwMkv",
 
-    "WexHanXiaoQuan",
-    "WexGuaZi",
-    "賤賤",
-    "WexDuBoKu",
-    "WexReBo",
-
-    "push_agent"
+    "WexAiReBo",
+    "WexAiGuaZi",
+    "WexAiDuBoKu",
+    "WexAiWenCai"
   ],
 
 
-  "rename_by_key": {
+  "remove_keywords": [
+    "直播",
+    "短剧",
+    "动漫",
+    "动画",
+    "听书",
+    "儿歌",
+    "音乐",
+    "教学",
+    "体育",
+    "教育",
+    "课堂",
+    "哔哩",
+    "网盘",
+    "分享",
+    "综合",
+    "采集",
+    "推送",
+    "DIY"
+  ],
 
-    "NewDouBan": "✧豆瓣┃导航✧",
+
+  "rename": {
+
     "Wexconfig": "✧设置┃中心✧",
 
-    "二小": "✧二小┃4K✧",
     "玩偶": "✧玩偶┃4K✧",
+    "AiNewMuOu": "✧木偶┃4K✧",
+    "二小": "✧二小┃4K✧",
     "NewZhiZhen": "✧至臻┃4K✧",
-    "NewMuOu": "✧木偶┃4K✧",
-    "NewDuoDuo": "✧多多┃4K✧",
-    "NewPanMe123": "✧123┃4K✧",
+    "AiNewDuoDuo": "✧多多┃4K✧",
+    "AiGuangYaZhenYing": "✧光鸭┃4K✧",
+    "AiNewGuanYing": "✧观影┃4K✧",
+    "AiQwMkv": "✧七味┃4K✧",
 
-    "WexHanXiaoQuan": "✧韩剧┃影视✧",
-    "WexGuaZi": "✧瓜子┃影视✧",
-    "賤賤": "✧贱片┃影视✧",
-    "WexDuBoKu": "✧独播┃影视✧",
-    "WexReBo": "✧热播┃影视✧",
 
-    "push_agent": "✧推送┃接收✧"
+    "WexAiReBo": "✧热播┃影视✧",
+    "WexAiGuaZi": "✧瓜子┃影视✧",
+    "WexAiDuBoKu": "✧独播┃影视✧",
+    "WexAiWenCai": "✧文才┃影视✧"
+
   },
 
 
-  "function_order": [
-    "NewDouBan",
-    "Wexconfig"
-  ],
+  "order": [
 
+    "Wexconfig",
 
-  "fourk_order": [
-    "二小",
     "玩偶",
+    "AiNewMuOu",
+    "二小",
     "NewZhiZhen",
-    "NewMuOu",
-    "NewDuoDuo",
-    "NewPanMe123"
-  ],
+    "AiNewDuoDuo",
+    "AiGuangYaZhenYing",
+    "AiNewGuanYing",
+    "AiQwMkv",
 
+    "WexAiReBo",
+    "WexAiGuaZi",
+    "WexAiDuBoKu",
+    "WexAiWenCai"
 
-  "movie_order": [
-    "WexHanXiaoQuan",
-    "WexGuaZi",
-    "賤賤",
-    "WexDuBoKu",
-    "WexReBo"
-  ],
-
-
-  "other_order": [
-    "push_agent"
-  ],
-
-
-  "min_sites": 14
+  ]
 }
