@@ -63,19 +63,19 @@
       "changeable": 0
     },
     {
-      "key": "AiNewDuoDuo",
-      "name": "✧多多┃4K✧",
+      "key": "AiNewYiDong4K",
+      "name": "✧逸动┃4K✧",
       "type": 3,
-      "api": "csp_AiNewDuoDuoGuard",
+      "api": "csp_AiNewYiDong4KGuard",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0
     },
     {
-      "key": "AiGuangYaZhenYing",
-      "name": "✧光鸭┃4K✧",
+      "key": "AiNewDuoDuo",
+      "name": "✧多多┃4K✧",
       "type": 3,
-      "api": "csp_AiGuangYaZhenYingGuard",
+      "api": "csp_AiNewDuoDuoGuard",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0
